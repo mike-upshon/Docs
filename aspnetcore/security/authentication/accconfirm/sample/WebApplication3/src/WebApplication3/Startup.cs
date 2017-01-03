@@ -57,6 +57,8 @@ namespace WebApplication3
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
+            services.Configure<AuthMessageSenderOptions>(Configuration);
+            
             services.AddMvc();
 
             // Add application services.
